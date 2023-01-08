@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="blogdetails">
+        <div class="container">
+          <div class="row">
+            <div class="four col-md-3">
+              <div class="counter-box colored">
+                <i class="bi bi-heart"></i>
+                <span class="counter">2147</span>
+                <p>Happy Customers</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <i class="bi bi-clipboard2-pulse-fill"></i>
+                <span class="counter">3275</span>
+                <p>Registered Members</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <i class="bi bi-cart-check"></i>
+                <span class="counter">289</span>
+                <p>Available Products</p>
+              </div>
+            </div>
+            <div class="four col-md-3">
+              <div class="counter-box">
+                <i class="bi bi-person"></i>
+                <span class="counter">1563</span>
+                <p>Saved Trees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer -->
+  
+      <!-- end footer -->
+      <script>
+        $(document).ready(function () {
+          $(".counter").each(function () {
+            $(this)
+              .prop("Counter", 0)
+              .animate(
+                { Counter: $(this).text() },
+                {
+                  duration: 4000,
+                  easing: "swing",
+                  step: function (now) {
+                    $(this).text(Math.ceil(now));
+                  },
+                }
+              );
+          });
+        });
+      </script>
+      <script src="java.js"></script>
+    
+</body>
+</html>
